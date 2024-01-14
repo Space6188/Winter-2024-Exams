@@ -9,7 +9,7 @@ sum = (arr) => {
       }
     });
   }
-  return "TypeError: Reduce of empty array with no initial value";
+  return 0;
 };
 
 module.exports = sum;
