@@ -1,5 +1,5 @@
 // Return an array without duplicates
 
-duplicate = (arr) => [...new Set(arr)];
+duplicate = (value, reps) => Array(reps).fill(value);
 
 module.exports = duplicate;
