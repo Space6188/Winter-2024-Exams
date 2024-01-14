@@ -5,7 +5,7 @@ Parseip = (ip) => {
   if (arr.length > 3) {
     return arr.map(Number);
   }
-  return "IP not valid";
+  return undefined;
 };
 
 module.exports = Parseip;
