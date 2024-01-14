@@ -1,19 +1,11 @@
 // Split string by the first occurrence of separator
 
-Parseip = (i) => {
-  a = [];
-  if (i === '') return;
-  else {
-    B = i.split('.');
-    if (B.length != 4) return;
-    j = 0;
-    for (const b of B) {
-      a[j] = parseInt(b);
-      if (isNaN(a[j])) return;
-      j++;
-    }
+ipToArr = (ip) => {
+  const arr = ip.split(".").filter(Boolean);
+  if (arr.length > 3) {
+    return arr.map(Number);
   }
-  return a;
+  return "IP not valid";
 };
 
-module.exports = Parseip;
+module.exports = ipToArr;
