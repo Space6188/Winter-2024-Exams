@@ -2,7 +2,7 @@
 
 Words = (str) => {
   const trimmedStr = str.trim();
-  const wordsArray = trimmedStr.split(" ");
+  const wordsArray = trimmedStr.split(" ").filter(Boolean);
   return wordsArray.length;
 };
 
