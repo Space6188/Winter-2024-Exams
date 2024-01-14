@@ -1,6 +1,6 @@
 // Count words in a string
 
-WordscountWords = (str) => {
+Words = (str) => {
   const trimmedStr = str.trim();
   const wordsArray = trimmedStr.split(" ");
   return wordsArray.length;

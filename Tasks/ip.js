@@ -1,6 +1,6 @@
 // Split string by the first occurrence of separator
 
-ipToArr = (ip) => {
+Parseip = (ip) => {
   const arr = ip.split(".").filter(Boolean);
   if (arr.length > 3) {
     return arr.map(Number);
@@ -8,4 +8,4 @@ ipToArr = (ip) => {
   return "IP not valid";
 };
 
-module.exports = ipToArr;
+module.exports = Parseip;
