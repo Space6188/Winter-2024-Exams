@@ -1,18 +1,9 @@
 // Count types in an array
-
-types_ = function (s) {
-  types_ = {
-    number: 0,
-    string: 0,
-    boolean: 0,
-  };
-  for (i of s) {
-    const t = typeof i;
-    types_[t]++;
-  }
-  s.push('string');
-  return types_;
-  s.length;
-};
-
+const defaultVL = { number: 0, boolean: 0, string: 0 };
+types_ = (arr) =>
+  arr.reduce((acc, value) => {
+    const type = typeof value;
+    acc[type] = (acc[type] || 0) + 1;
+    return acc;
+  }, defaultVL);
 module.exports = types_;
